@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>Contact Me</title>
+</head>
+
+<body>
+    <div class="embeded-video">
+        <iframe src="https://www.youtube.com/embed/hvNne-39iQs?si=RKkYmcQQLulHNXtv" allowfullscreen width="300" height="250"></iframe>
+    </div>
+
+    <div class="form">
+        <form name="feedback">
+            <p>First name* <input type="text" placeholder="anonymous" name="fname" required></p>
+            <p>Last name* <input type="text" placeholder="anonymous" name="lname" required></p>
+            <p>Email <input type="email" placeholder="name@domain.com" name="mail"></p>
+            <p>Birthday <input type="date" name="birthday"></p>
+            <p>Favorite number <input type="number"></p>
+            <p>Favorite color <input type="color"></p>
+
+            <p>Would you reccomend this website?
+            <p><input type="radio" name="recommend" value="yes"> Yes</p>
+            <p><input type="radio" name="recommend" value="no"> No</p>
+
+            <p>Which of these websites are your favorites?</p>
+            <p>
+                <select name="websites" id="websites" multiple>
+                    <option value="Google">Google</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Twitter">Twitter</option>
+                    <option value="Youtube">Youtube</option>
+                    <option value="Instagram">Instagram</option>
+                </select>
+            </p>
+
+            <p>Rate this website from 1 - 10</p>
+            <p><input type="range" name="rating" min="1" max="10"></p>
+
+            <p>Please add any additional comments below</p>
+            <p><textarea name="comment" id="comment" cols="30" rows="10"></textarea></p>
+
+            <p><input type="submit" value="Submit"></p>
+        </form>
+    </div>
+</body>
+
+</html>
