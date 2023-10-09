@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #d6ebeb;
+}
+
+p {
+    line-height: 1.5;
+    text-align: left;
+}
+
+p::first-letter{
+    font-size: 1.2em;
+}
+
+li {
+    list-style-image: url(../img/TinyTrumpet.png);
+    color: rgb(240, 45, 78);
+    font-weight: 700;
+}
+
+h1 {
+    transition: margin-right 2s, transform 0.5s;
+    text-shadow: 2px 2px 4px rgba(128, 128, 128, 0.5);
+}
+
+h1:hover {
+    margin-right: 0;
+    transform: scale(1.1);
+}
+a{
+    text-decoration: none;
+}
+
+body {
+    background-image: url(../img/Background.jpg);
+    background-size: cover;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #646F4F;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    min-height: 200vh;
+}
+
+.navbar {
+    position: fixed;
+    top: 2%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-style: italic;
+    padding: 10px 20px;
+    background-color: beige;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 0 5px;
+    color: black;
+}
+
+
+.navbar a:hover {
+    background-color: #d6ebeb;
+    color: black;
+}
+
+
+.introduction {
+    top: 10vh;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: beige;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    width: 80%;
+    height: 40%;
+    z-index: 2;
+}
+
+.introduction h1 {
+    text-align: center;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+.introduction p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+}
+
+
+.introduction .hobbies {
+    text-align: left;
+    margin-top: 20px;
+    float: left;
+}
+
+.introduction img {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 20%;
+    height: 50%;
+    float: right;
+}
+
+.assignment {
+    background-color: beige;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    position: absolute;
+    top: 70vh;
+    right: 20px;
+}
+
+.assignment h1 {
+    transition: margin-right 2s;
+    font-size: 24px;
+    text-align: center;
+}
+
+.portfolio h1 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.portfolio ul {
+    list-style: disc; 
+    padding-left: 20px; 
+}
+
+.portfolio li {
+    margin-bottom: 10px; 
+}
+
+#contact-info-section {
+    position: relative;
+    background-color: beige;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    top: 53vh;
+}
+
+
+.portfolio,
+.schedule {
+    background-color: beige;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+    width: 60%;
+    margin: 20px auto;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.portfolio{
+    top: 100vh;
+}
+
+.portfolio p {
+    padding: 10px;
+    background-color: beige;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px black;
+}
+
+.schedule {
+    top: 100vh;
+    right: 0;
+}
+
+.schedule h1 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.schedule table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.schedule th,
+.schedule td {
+    color: black;
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: center;
+}
+
+.schedule th {
+    background-color: #F7E7CE;
+    font-weight: bold;
+}
+
+.schedule tr:nth-child(even) {
+    background-color: rgb(201, 201, 179); 
+}
+
+footer {
+    background-color: beige;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 20%;
+    text-align: center;
+    font-weight: bold;
+}
+
+a {
+    color: #000;
+}
+
+a:hover {
+    text-decoration: underline;
+}
