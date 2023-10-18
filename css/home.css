@@ -183,6 +183,7 @@ body {
 }
 
 .schedule {
+    z-index: 2;
     top: 100vh;
     right: 0;
 }
