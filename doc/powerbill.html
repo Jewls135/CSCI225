@@ -46,25 +46,25 @@
                 <tr>
                     <td>Base Charge:</td>
                     <td>
-                        <p id="baseCharge">0.0</p>
+                        <p id="baseCharge">$0.0</p>
                     </td>
                 </tr>
                 <tr>
                     <td>Tier 1 Component (kWh):</td>
                     <td>
-                        <p id="tier1">0.0</p>
+                        <p id="tier1">$0.0</p>
                     </td>
                 </tr>
                 <tr>
                     <td>Tier 2 Component (kWh):</td>
                     <td>
-                        <p id="tier2">0.0</p>
+                        <p id="tier2">$0.0</p>
                     </td>
                 </tr>
                 <tr>
                     <td>Tier 3 Component (kWh):</td>
                     <td>
-                        <p id="tier3">0.0</p>
+                        <p id="tier3">$0.0</p>
                     </td>
                 </tr>
                 <tr>
@@ -72,31 +72,31 @@
                         <p id="bold">Base Revenue -- Base Bill Subtotal:</p>
                     </td>
                     <td>
-                        <p id="baseBillSub">0.0</p>
+                        <p id="baseBillSub">$0.0</p>
                     </td>
                 </tr>
                 <tr>
                     <td>Fuel Cost Rider:</td>
                     <td>
-                        <p id="fuelCostRider">0.0</p>
+                        <p id="fuelCostRider">$0.0</p>
                     </td>
                 </tr>
                 <tr>
                     <td>Demand Side Management Residential Rider:</td>
                     <td>
-                        <p id="residentialRider">0.0</p>
+                        <p id="residentialRider">$0.0</p>
                     </td>
                 </tr>
                 <tr>
                     <td>Nuclear Construction Cost Recovery Rider:</td>
                     <td>
-                        <p id="nuclearRider">0.0</p>
+                        <p id="nuclearRider">$0.0</p>
                     </td>
                 </tr>
                 <tr>
                     <td>Enviromental Compliance Cost Recovery Rider:</td>
                     <td>
-                        <p id="enviromentalRider">0.0</p>
+                        <p id="enviromentalRider">$0.0</p>
                     </td>
                 </tr>
                 <tr>
@@ -104,13 +104,13 @@
                         <p id="bold">Total Revenue -- Current Service Subtotal:</p>
                     </td>
                     <td>
-                        <p id="serviceSubtotal">0.0</p>
+                        <p id="serviceSubtotal">$0.0</p>
                     </td>
                 </tr>
                 <tr>
                     <td>Franchise Fee: </td>
                     <td>
-                        <p id="franchiseFee">0.0</p>
+                        <p id="franchiseFee">$0.0</p>
                     </td>
                 </tr>
                 <tr>
@@ -118,7 +118,7 @@
                         <p id="bold">Total (excluding tax):</p>
                     </td>
                     <td>
-                        <p id="noTaxTotal">0.0</p>
+                        <p id="noTaxTotal">$0.0</p>
                     </td>
                 </tr>
                 <tr>
@@ -126,14 +126,14 @@
                         <p id="bold">TOTAL (w/tax):</p>
                     </td>
                     <td>
-                        <p id="total">0.0</p>
+                        <p id="total">$0.0</p>
                     </td>
                 </tr>
             </table>
         </div>
         <script>
             // Variables
-            var DEFAULT_VALUE = "0.0"
+            var DEFAULT_VALUE = "$0.0"
             var submitButton = document.getElementById("submit");
             var resetButton = document.getElementById("reset");
     
@@ -214,19 +214,19 @@
     
                 noTaxTotal = Math.round((serviceSubtotal + franchiseFee)* 100)/100;
                 total = Math.round((noTaxTotal + noTaxTotal*(salesTax/100))* 100)/100;
-                document.getElementById("baseCharge").innerHTML = baseCharge;
-                document.getElementById("tier1").innerHTML = tier1Cost;
-                document.getElementById("tier2").innerHTML = tier2Cost;
-                document.getElementById("tier3").innerHTML = tier3Cost;
-                document.getElementById("baseBillSub").innerHTML = baseBillSubTotal;
-                document.getElementById("fuelCostRider").innerHTML = fuelCostRider;
-                document.getElementById("residentialRider").innerHTML = residentialRider;
-                document.getElementById("nuclearRider").innerHTML = nuclearRider;
-                document.getElementById("enviromentalRider").innerHTML = enviromentalRider;
-                document.getElementById("serviceSubtotal").innerHTML = serviceSubtotal;
-                document.getElementById("franchiseFee").innerHTML = franchiseFee;
-                document.getElementById("noTaxTotal").innerHTML = noTaxTotal;
-                document.getElementById("total").innerHTML = total;
+                document.getElementById("baseCharge").innerHTML = "$" + baseCharge;
+                document.getElementById("tier1").innerHTML = "$" + tier1Cost;
+                document.getElementById("tier2").innerHTML = "$" + tier2Cost;
+                document.getElementById("tier3").innerHTML = "$" + tier3Cost;
+                document.getElementById("baseBillSub").innerHTML = "$" + baseBillSubTotal;
+                document.getElementById("fuelCostRider").innerHTML = "$" + fuelCostRider;
+                document.getElementById("residentialRider").innerHTML = "$" + residentialRider;
+                document.getElementById("nuclearRider").innerHTML = "$" + nuclearRider;
+                document.getElementById("enviromentalRider").innerHTML = "$" + enviromentalRider;
+                document.getElementById("serviceSubtotal").innerHTML = "$" + serviceSubtotal;
+                document.getElementById("franchiseFee").innerHTML = "$" + franchiseFee;
+                document.getElementById("noTaxTotal").innerHTML = "$" + noTaxTotal;
+                document.getElementById("total").innerHTML = "$" + total;
                 
                 if(total > 500){
                     window.open("https://www.georgiapower.com/residential/save-money-and-energy/products-programs.html");
@@ -253,7 +253,7 @@
                 document.getElementById("noTaxTotal").innerHTML = DEFAULT_VALUE;
                 document.getElementById("total").innerHTML = DEFAULT_VALUE;
             } // End of func resetInputs
-    
+            
             // Event listeners
             submitButton.addEventListener("click", readInputs, false);
             resetButton.addEventListener("click", resetInterface, false);
