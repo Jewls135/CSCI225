@@ -1,0 +1,84 @@
+body {
+    background-color: rgb(192, 192, 192);
+}
+
+.flex-container {
+    display: flex;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+.inputBox {
+    background-color: white;
+    left: 5vw;
+    border: 1px solid black;
+    border-radius: 2vh;
+    padding: 2vh;
+    flex: 1;
+    margin-right: 2vw;
+}
+
+button {
+    background-color: rgb(192, 192, 192);
+    border: 1px solid black;
+    border-radius: 1vh;
+    height: 2vh;
+    width: 5vw;
+    transition: .1s;
+}
+
+button:hover {
+    background-color: rgb(129, 129, 129);
+}
+
+button:active {
+    opacity: .3;
+}
+
+.buttonsP {
+    text-align: right;
+}
+
+.inputBox p {
+    line-height: 2;
+}
+
+.outputBox {
+    background-color: white;
+    right: 5vw;
+    border: 1px solid black;
+    border-radius: 2vh;
+    padding: 2vh;
+    height: 90vh;
+    flex: 1;
+}
+
+table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 80%;
+}
+
+tr:nth-child(n + 1) {
+    border: solid;
+    border-width: 1px;
+}
+
+tr:nth-child(2n+2) {
+    background-color: rgb(192, 192, 192);
+}
+td {
+    padding: 2%;
+}
+
+.inputP {
+    text-align: right;
+}
+
+#bold {
+    font-weight: bold;
+}
