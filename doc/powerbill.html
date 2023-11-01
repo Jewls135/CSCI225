@@ -150,7 +150,7 @@
             } // End of func readInputs
     
             function calculateAmounts(usage, billingPeriod, insideLimits, isSummer, salesTax) {
-                var baseCharge = Math.round(.4603 * billingPeriod* 100)/100;
+                var baseCharge = .4603 * billingPeriod;
                 var tier1Cost = 0;
                 var tier2Cost = 0;
                 var tier3Cost = 0;
@@ -168,65 +168,66 @@
                     if (isSummer) { // Then calculate for summer rates
     
                         if (usage <= 650) {
-                            tier1Cost = Math.round(.066678 * usage * 100)/100;
+                            tier1Cost = .066678 * usage;
                         } else if (usage < 1000) {
-                            tier1Cost = Math.round(650 * .066678* 100)/100;
-                            tier2Cost = Math.round((usage - 650) * .110748* 100)/100;
+                            tier1Cost = 650 * .066678;
+                            tier2Cost = (usage - 650) * .110748;
                         } else {
-                            tier1Cost = Math.round(650 * .066678* 100)/100;
-                            tier2Cost = Math.round(350 * .110748* 100)/100;
-                            tier3Cost = Math.round((usage - 1000) * .114625* 100)/100;
+                            tier1Cost = 650 * .066678;
+                            tier2Cost = 350 * .110748;
+                            tier3Cost = (usage - 1000) * .114625;
                         } // End if inner if
     
                     } else { // else calculate for winter rates
     
                         if (usage <= 650) {
-                            tier1Cost = Math.round(.062404 * usage* 100)/100;
+                            tier1Cost = .062404 * usage;
                         } else if (usage < 1000) {
-                            tier1Cost = Math.round(650 * .062404* 100)/100;
-                            tier2Cost = Math.round((usage - 650) * .062404* 100)/100;
+                            tier1Cost = 650 * .062404;
+                            tier2Cost = (usage - 650) * .062404;
                         } else {
-                            tier1Cost = Math.round(650 * .062404* 100)/100;
-                            tier2Cost = Math.round(350 * .062404* 100)/100;
-                            tier3Cost = Math.round((usage - 1000) * .062404* 100)/100;
+                            tier1Cost = 650 * .062404;
+                            tier2Cost = 350 * .062404;
+                            tier3Cost = (usage - 1000) * .062404;
                         } // End if inner if
     
                     }// End of middle if
     
                 } // End of outer if
-                baseBillSubTotal = Math.round((baseCharge + tier1Cost + tier2Cost + tier3Cost)* 100)/100;
+                baseBillSubTotal = (baseCharge + tier1Cost + tier2Cost + tier3Cost);
                 if (isSummer){
-                    fuelCostRider = Math.round(usage * .045876* 100)/100;
+                    fuelCostRider = usage * .045876;
                 } else{
-                    fuelCostRider = Math.round(usage * .042859* 100)/100;
+                    fuelCostRider = usage * .042859;
                 } // End of if
     
-                residentialRider = Math.round(baseBillSubTotal*.015989* 100)/100;
-                nuclearRider = Math.round(baseBillSubTotal*.041562* 100)/100;
-                enviromentalRider = Math.round(baseBillSubTotal*.162813* 100)/100;
-                serviceSubtotal = Math.round((baseBillSubTotal + fuelCostRider + residentialRider + nuclearRider + enviromentalRider)* 100)/100;
+                residentialRider = baseBillSubTotal*.015989;
+                nuclearRider = baseBillSubTotal*.041562;
+                enviromentalRider = baseBillSubTotal*.162813;
+                serviceSubtotal = baseBillSubTotal + fuelCostRider + residentialRider + nuclearRider + enviromentalRider;
     
                 if(insideLimits){
-                    franchiseFee = Math.round(serviceSubtotal*.030674* 100)/100;
+                    franchiseFee = serviceSubtotal*.030674;
                 } else{
-                    franchiseFee = Math.round(serviceSubtotal*.011839* 100)/100;
+                    franchiseFee = serviceSubtotal*.011839;
                 } // End of if
     
-                noTaxTotal = Math.round((serviceSubtotal + franchiseFee)* 100)/100;
-                total = Math.round((noTaxTotal + noTaxTotal*(salesTax/100))* 100)/100;
-                document.getElementById("baseCharge").innerHTML = "$" + baseCharge;
-                document.getElementById("tier1").innerHTML = "$" + tier1Cost;
-                document.getElementById("tier2").innerHTML = "$" + tier2Cost;
-                document.getElementById("tier3").innerHTML = "$" + tier3Cost;
-                document.getElementById("baseBillSub").innerHTML = "$" + baseBillSubTotal;
-                document.getElementById("fuelCostRider").innerHTML = "$" + fuelCostRider;
-                document.getElementById("residentialRider").innerHTML = "$" + residentialRider;
-                document.getElementById("nuclearRider").innerHTML = "$" + nuclearRider;
-                document.getElementById("enviromentalRider").innerHTML = "$" + enviromentalRider;
-                document.getElementById("serviceSubtotal").innerHTML = "$" + serviceSubtotal;
-                document.getElementById("franchiseFee").innerHTML = "$" + franchiseFee;
-                document.getElementById("noTaxTotal").innerHTML = "$" + noTaxTotal;
-                document.getElementById("total").innerHTML = "$" + total;
+                noTaxTotal = serviceSubtotal + franchiseFee;
+                total = (noTaxTotal + noTaxTotal*(salesTax/100));
+
+                document.getElementById("baseCharge").innerHTML = "$" + Math.round(baseCharge*100)/100;
+                document.getElementById("tier1").innerHTML = "$" + Math.round(tier1Cost*100)/100;
+                document.getElementById("tier2").innerHTML = "$" + Math.round(tier2Cost*100)/100;
+                document.getElementById("tier3").innerHTML = "$" + Math.round(tier3Cost*100)/100;
+                document.getElementById("baseBillSub").innerHTML = "$" + Math.round(baseBillSubTotal*100)/100;
+                document.getElementById("fuelCostRider").innerHTML = "$" + Math.round(fuelCostRider*100)/100;
+                document.getElementById("residentialRider").innerHTML = "$" + Math.round(residentialRider*100)/100;
+                document.getElementById("nuclearRider").innerHTML = "$" + Math.round(nuclearRider*100)/100;
+                document.getElementById("enviromentalRider").innerHTML = "$" + Math.round(enviromentalRider*100)/100;
+                document.getElementById("serviceSubtotal").innerHTML = "$" + Math.round(serviceSubtotal*100)/100;
+                document.getElementById("franchiseFee").innerHTML = "$" + Math.round(franchiseFee*100)/100;
+                document.getElementById("noTaxTotal").innerHTML = "$" + Math.round(noTaxTotal*100)/100;
+                document.getElementById("total").innerHTML = "$" + Math.round(total*100)/100;
                 
                 if(total > 500){
                     window.open("https://www.georgiapower.com/residential/save-money-and-energy/products-programs.html");
