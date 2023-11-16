@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <link rel="stylesheet" href="../css/realestate.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body>
+        <div class = "navbar">
+            <button id = "buy"><p>Buy</p></button>
+            <button id = "sell"><p>Sell</p></button>
+            <button id = "loan"><p>Loan</p></button>
+            <button id = "about"><p>About</p></button>
+        </div>
+
+        <div class = "loanInput" id = "loanInput">
+            <p id = "inputHeader">Loan Information</p>
+            <p>Loan Amount: <input type="number" id = "loanAmount">$</p>
+            <p>Interest Rate: <input type="number" id = "interestRate">%</p>
+            <p>Loan Term: <input type="number" id = "loanTerm">Years</p>
+            <p>Start Date: 
+                <select name="month" id="startMonth">
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+
+                <select name="year" id="startYear">
+                    <script>
+                        for (var i = 1980; i <= 2020; i++) {
+                            document.write("<option value='" + i + "'>" + i + "</option>");
+                        }
+                    </script>
+                </select>
+            </p>
+            <button id = "calculate">Calculate</button>
+        </div>
+
+        <div class = "loanOutput" id = "loanOutput">
+
+        </div>
+
+        <div class = "footer">
+
+        </div>
+        <script src="../js/realestate.js"></script>
+    </body>
+</html>

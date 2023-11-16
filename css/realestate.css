@@ -1,0 +1,90 @@
+
+html {
+    background: url(../img/Estate.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+body{
+    position: relative;
+    margin:0;
+}
+
+.navbar {
+    width: 20%;
+    height: 4%;
+    display:flex;
+}
+
+.navbar button{
+    width: 25%;
+    height: 100%;
+    background-color: rgb(75,114,158);
+    border: 1px solid rgb(62, 85, 115);
+    color: white;
+    font-size: 100%;
+    font-weight: bold;
+    transition:.2s;
+}
+
+.navbar button:hover{
+    background-color: rgb(151, 170, 192);;
+}
+
+.loanInput {
+    position: absolute;
+    width: 30%;
+    background-color: white;
+    opacity: 85%;
+    right: 10%;
+}
+
+.loanInput > p, .loanInput > button{
+    height: 100/6%;
+    width: 100%;
+    opacity: 85%;
+}
+
+.loanInput > p#inputHeader {
+    margin-top: 0;
+}
+
+.loanInput button, #inputHeader{
+    background-color: rgb(75,114,158);
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.loanOutput {
+    position: absolute;
+    background-color: white;
+    right: 10%;
+}
+table, td{
+    border: 1px solid;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+td {
+    padding: 5px;
+}
+
+#headtr {
+    font-weight: bold;
+    font-size: 1.2;
+}
+
+/* Chrome, Safari, Edge, Opera: removing input arrows on number input*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox: removing input arrows on number input*/
+input[type=number] {
+  -moz-appearance: textfield;
+}
